@@ -42,11 +42,13 @@ plt.ylabel("Salary")
 plt.show()
 
 # predict the salary of an employee with 5 years of experience
-print(regressor.predict([[5]]))
+mid_level = round(regressor.predict([[5]])[0], 2)
+print("Salary prediction for a mid level role:", mid_level)
 
 # predict the salary of an employee with 12 years of experience
-print(regressor.predict([[12]]))
+senior_level = round(regressor.predict([[12]])[0], 2)
+print("Salary prediction for a senior level role:", senior_level)
 
 # get the coefficients and intercept
-print(regressor.coef_)
-print(regressor.intercept_)
+print(round(regressor.coef_[0], 2))
+print(round(regressor.intercept_, 2))
