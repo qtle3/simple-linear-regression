@@ -41,3 +41,10 @@ plt.title("Salary vs Experience (Test Set)")
 plt.xlabel("Years of Experience")
 plt.ylabel("Salary")
 plt.show()
+
+# predict the salary of an employee with 12 years of experience
+print(regressor.predict([[12]]))
+
+# get the coefficients and intercept
+print(regressor.coef_)
+print(regressor.intercept_)
