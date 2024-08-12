@@ -10,8 +10,7 @@ X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 
 print(dataset)
-print(X)
-print(y)
+
 # split the dataset into training and test set
 from sklearn.model_selection import train_test_split
 
@@ -41,6 +40,9 @@ plt.title("Salary vs Experience (Test Set)")
 plt.xlabel("Years of Experience")
 plt.ylabel("Salary")
 plt.show()
+
+# predict the salary of an employee with 5 years of experience
+print(regressor.predict([[5]]))
 
 # predict the salary of an employee with 12 years of experience
 print(regressor.predict([[12]]))
